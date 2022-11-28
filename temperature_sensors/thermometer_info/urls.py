@@ -12,4 +12,9 @@ urlpatterns = [
       path('profile/logout/', LogoutView.as_view(), {'next_page': settings.LOGOUT_REDIRECT_URL},
            name='logout'),
       path('profile/secure/', views.secure, name='secure'),
+
+      path('api/thermometers', views.ThermometersAPIView.as_view()),
+      path('api/thermometers/<int:id>/', views.ThermometerAPIView.as_view()),
+      path('api/thermometers/location/<str:location>', views.ThermometerLocationAPIView.as_view()),
+      path('api/files/csv', views.FilesAPIView.as_view()),
 ]
