@@ -1,1 +1,3 @@
-# Kuharchuk_thermometers_info
+# Кухарчук Ростислав
+## Варіант 2
+## Temperature sensors
