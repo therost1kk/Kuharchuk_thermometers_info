@@ -1,0 +1,22 @@
+{% extends "base_header.html" %}
+{% block title %}
+    Home
+{% endblock %}
+{% block content %}
+<div class="container">
+<ol>
+    <table class="table">
+    <tr>
+        <th class="text-center"><h3 class="display-6">Thermometer locations:</h3></th>
+    </tr>
+        {% for location in thermometer_locations %}
+            <tr>
+                <td class="text-center"><a class="text-decoration-none link-secondary" style="font-size: 20px" href="/thermometers/location/{{ location.location }}">{{ location.location }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+</ol>
+</div>
+{% endblock %}

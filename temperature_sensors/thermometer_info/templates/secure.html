@@ -1,0 +1,12 @@
+{% extends "base_header.html" %}
+{% block title %}
+   Secure
+{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    <h1 class="display-5 text-center">Hello! You have access to secure page.</h1>
+    {% else %}
+    <h1 class="display-5 text-center">Forbidden! You must be logged in.</h1>
+    {% endif %}
+{% endblock %}

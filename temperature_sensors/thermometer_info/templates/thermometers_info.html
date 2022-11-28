@@ -1,0 +1,25 @@
+{% extends "base_header.html" %}
+{% block title %}
+    Server Info: {{ server.1.1 }}
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1 class="display-5 mb-4 mt-4">Thermometers in {{ thermometers.1.1.1 }}:</h1>
+    <div class="container">
+        {% for thermometer in thermometers %}
+           <h3 class="mb-4 mt-4" style="font-size: 25px"> Thermometer: {{ thermometer.5.1 }}</h3>
+            <table class="table">
+            {% for param in thermometer%}
+                <tr>
+                    <td>{{ param.0 }}</td>
+                    <td>{{ param.1 }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
