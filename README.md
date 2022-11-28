@@ -1,0 +1,1 @@
+# Kuharchuk_thermometers_info
